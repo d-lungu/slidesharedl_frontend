@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshader Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.12.0/libs/jszip.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/pptxgenjs@3.12.0/dist/pptxgen.min.js" defer></script>
+    <script src="./script.js" defer></script>
+
+    <div id="main_container" class="container center">
+        <form>
+            <label for="slideshare_url">Slideshare URL:</label>
+            <input type="text" id="slideshare_url" name="slideshare_url"><br><br>
+        </form>
+        <button id="download_button" class="center" onclick="onClickCallback()">Download</button>
+
+        <p>Very big presentations (150+ slides) might fail to download. Please contact me <a href="mailto:dennylungu19@gmail.com">here</a> if you have any problems.</p>
+    </div>
+
+    <div id="post_download" class="container center">
+        <p id="post_download_text"></p>
+        <a href="/">Download another presentation</a>
+    </div>
+
+    <div id="loader_container">
+        <p id="loader_text">Downloading...</p>
+        <div id="loader"></div>
+    </div>
+
+    <div class="footer">
+        <div class="footer--icons">
+          <a href="https://github.com/d-lungu"><img src="./img/github-mark.svg" alt="github"></a>
+        </div>
+      </div>
+</body>
+
+</html>
