@@ -1,4 +1,4 @@
-const API_ENDPOINT = "http://slidesharedl.dennylungu.com/api";
+const API_ENDPOINT = "https://slidesharedl.dennylungu.com/api";
 
 function hideLoading() {
   document.getElementById("loader_container").style.display = "none";
