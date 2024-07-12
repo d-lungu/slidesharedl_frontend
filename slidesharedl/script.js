@@ -1,5 +1,4 @@
-const API_ENDPOINT = "https://slidesharedl-backend.onrender.com";
-//const API_ENDPOINT = "http://localhost:10000";
+const API_ENDPOINT = "http://localhost:10000/api";
 
 function hideLoading() {
   document.getElementById("loader_container").style.display = "none";
