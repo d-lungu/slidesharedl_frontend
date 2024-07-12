@@ -23,10 +23,10 @@ function showLoadingText(text) {
 document.getElementById("main_container").style.display = "none";
 showLoadingText("Please wait while the website is loading...");
 showLoading();
-fetch(API_ENDPOINT + "/ping").then(() => {
-  document.getElementById("main_container").style.display = "flex";
-  hideLoading();
-}); // wake up mr. west
+
+document.getElementById("main_container").style.display = "flex";
+hideLoading();
+
 
 function formatTime(seconds) {
   seconds = Math.round(seconds * 1.25);
