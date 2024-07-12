@@ -20,16 +20,11 @@ function showLoadingText(text) {
   document.getElementById("loader_text").innerText = text;
 }
 
-document.getElementById("main_container").style.display = "none";
-showLoadingText("Please wait while the website is loading...");
-showLoading();
-
 document.getElementById("main_container").style.display = "flex";
 hideLoading();
 
-
 function formatTime(seconds) {
-  seconds = Math.round(seconds * 1.25);
+  seconds = Math.round(seconds);
 
   if (seconds < 60) {
     return seconds + " seconds";
