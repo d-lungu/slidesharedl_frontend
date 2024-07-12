@@ -1,5 +1,4 @@
-const API_ENDPOINT = "https://slidesharedl-backend.onrender.com";
-//const API_ENDPOINT = "http://localhost:10000";
+const API_ENDPOINT = "http://slidesharedl.dennylungu.com/api";
 
 function hideLoading() {
   document.getElementById("loader_container").style.display = "none";
@@ -67,13 +66,9 @@ function onClickCallback() {
     .then((res) => res.json())
     .then((data) => {
       pres_title = data.title; // filename
-      const estimated_download_time_seconds =
-        data.estimated_download_time_seconds;
+      const estimated_download_time_seconds = data.estimated_download_time_seconds;
       showLoadingText(
-        "Downloading presentation: '" +
-          pres_title +
-          "'.\n Estimated download time: " +
-          formatTime(estimated_download_time_seconds)
+        "Downloading presentation: '" + pres_title + "'.\n Estimated download time: " + formatTime(estimated_download_time_seconds)
       );
       showLoading();
       showLoadingSpin();
@@ -83,8 +78,7 @@ function onClickCallback() {
       fetch(url)
         .then((res) => res.blob())
         .then((res) => {
-          document.getElementById("post_download_text").innerText =
-            "'" + pres_title + "' is ready to download...";
+          document.getElementById("post_download_text").innerText = "'" + pres_title + "' is ready to download...";
           hideLoading();
           document.getElementById("post_download").style.display = "block";
 
